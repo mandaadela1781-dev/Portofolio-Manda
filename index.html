@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Mhanda Fadhelia Novriza</title>
+
+  <!-- Google Font Poppins (added, tidak menghapus yang lama) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+    }
+    .hero .content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+    }
+
+    /* ===== PROJECT CARD ===== */
+    .projects .card {
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .projects .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #222;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: #00c6ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== ANIMATION EFFECTS ===== */
+    .typing {
+      color: #00c6ff;
+      font-weight: bold;
+    }
+
+    /* New styles for school & achievements sections and preview */
+    .entry-card img {
+      max-height: 160px;
+      object-fit: cover;
+    }
+    .thumb-preview {
+      max-width: 120px;
+      max-height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .form-small { font-size: 0.95rem; }
+
+    /* keep hero spacing from fixed navbar */
+    body { padding-top: 70px; }
+
+    /* small responsive tweaks */
+    @media (max-width: 576px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero { height: auto; padding: 80px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Mhanda</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#school">Riwayat Sekolah</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Prestasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="content text-center">
+      <h5 data-aos="fade-down" data-aos-delay="300">Halo, Saya</h5>
+      <h1 data-aos="zoom-in" data-aos-delay="500">Mhanda Fadhelia Novriza</h1>
+      <p data-aos="fade-up" data-aos-delay="700">
+        Saya seorang <span class="typing"></span>
+      </p>
+      <div data-aos="fade-up" data-aos-delay="900">
+        <a class="btn btn-primary px-4 py-2 me-2" href="#projects">Lihat Proyek Saya</a>
+        <a class="btn btn-light px-4 py-2" href="#contact">Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1581091012184-5c7b5a74a9b6?auto=format&fit=crop&w=800&q=80" 
+               class="img-fluid rounded shadow mb-3" alt="">
+          <!-- if you have a local photo, keep the tag but ensure file exists -->
+          <img src="foto diri.jpeg" width="500" height="500" class="img-fluid rounded shadow" alt="Foto Mhanda (lokal)">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="fw-bold mb-3">Tentang Saya</h2>
+          <p>Hai! Aku Mhanda Fadhelia Novriza, mahasiswa Sistem Informasi yang lagi semangat belajar di dunia teknologi. Aku punya ketertarikan di pembuatan website dan desain UI/UX.
+
+Walau masih dalam proses belajar dan belum punya banyak pengalaman, aku suka banget mencoba hal baru dan terus ngembangin skill-ku. Aku juga senang kerja bareng tim dan belajar dari orang lain.
+
+Beberapa hal yang lagi aku pelajari:.</p>
+          <ul class="list-unstyled">
+            <li>💻 HTML, CSS, JavaScript</li>
+            <li>🎨 Desain UI/UX (Figma)</li>
+            <li>🧩 WordPress & Database MySQL</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RIWAYAT SEKOLAH (baru) ===== -->
+  <section id="school" class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <h2 class="fw-bold mb-0" data-aos="fade-up">Riwayat Sekolah</h2>
+          <p class="text-muted mb-4" data-aos="fade-up" data-aos-delay="100"></p>
+        </div>
+      </div>
+
+      <!-- Existing example entries (tidak menghilangkan kode lama) -->
+      <div class="row g-3 mb-4" id="school-list">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card entry-card">
+            <img src="foto MA.jpeg" class="card-img-top" alt="SMA">
+            <div class="card-body">
+              <h5 class="card-title">MA MAKRIFATUL ILMI</h5>
+              <p class="card-text mb-1"><small class="text-muted">2022-2025</small></p>
+              <p class="card-text">Jurusan IPA, aktif di bidang akademik dan non-akademik </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="card entry-card">
+            <img src="foto mts.jpeg" class="card-img-top" alt="SMP">
+            <div class="card-body">
+              <h5 class="card-title">MTS MAKRIFATUL ILMI</h5>
+              <p class="card-text mb-1"><small class="text-muted">2019-2022</small></p>
+              <p class="card-text">Aktif di bidang akademik dan non non-akademik</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form untuk menambah riwayat sekolah dengan foto (preview) -->
+      <div class="card mb-5" data-aos="fade-up" data-aos-delay="350">
+        <div class="card-body">
+          <h5 class="card-title">Tambah Riwayat Sekolah</h5>
+          <form id="school-form" class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label form-small">Tahun / Rentang</label>
+              <input type="text" id="school-year" class="form-control form-small" placeholder="2022-2025" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label form-small">Nama Sekolah</label>
+              <input type="text" id="school-name" class="form-control form-small" placeholder="MA MAKRIFATUL ILMI" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label form-small">Foto (jpg/png)</label>
+              <input type="file" id="school-photo" class="form-control form-small" accept="image/*">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label form-small">Deskripsi singkat</label>
+              <textarea id="school-desc" class="form-control form-small" rows="2" placeholder="Sekolah menengah atas berbasis pendidikan agama dan sains yang berfokus pada pembentukan karakter, kedisiplinan, serta pengembangan potensi akademik dan non-akademik siswa.
+
+Selama bersekolah di sini, aku aktif mengikuti berbagai kegiatan , lomba akademik, dan kegiatan keagamaan. Dari sekolah ini, aku belajar pentingnya tanggung jawab, kerja sama, dan semangat belajar untuk terus berkembang."></textarea>
+            </div>
+
+            <div class="col-12 d-flex align-items-center gap-3">
+              <img id="school-preview" class="thumb-preview" src="" alt="" style="display:none">
+              <button type="submit" class="btn btn-success">Tambah Riwayat</button>
+              <button type="button" id="school-clear" class="btn btn-outline-secondary">Bersihkan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRESTASI (baru, dengan kemampuan menambah foto) ===== -->
+  <section id="achievements" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold" data-aos="fade-up">Prestasi</h2>
+      <p class="text-muted" data-aos="fade-up" data-aos-delay="100"></p>
+
+      <div class="row g-3 mb-4" id="achievements-list">
+        <!-- contoh prestasi yang tidak menghapus kode lama -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card entry-card">
+            <img src="piagam.jpeg" class="card-img-top" alt="Prestasi 1">
+            <div class="card-body">
+              <h5 class="card-title">Juara 1 KSM KIMIA</h5>
+              <p class="card-text mb-1"><small class="text-muted">2024</small></p>
+              <p class="card-text">Tim mengembangkan prototipe aplikasi manajemen event kampus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form untuk menambah prestasi -->
+      <div class="card" data-aos="fade-up" data-aos-delay="250">
+        <div class="card-body">
+          <h5 class="card-title"> Prestasi</h5>
+          <form id="achieve-form" class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label form-small">Tahun</label>
+              <input type="text" id="achieve-year" class="form-control form-small" placeholder=" 2024" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label form-small">Judul Prestasi</label>
+              <input type="text" id="achieve-title" class="form-control form-small" placeholder="Juara 1 Lomba KSM kimia" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label form-small">Foto Bukti (opsional)</label>
+              <input type="file" id="achieve-photo" class="form-control form-small" accept="image/*">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label form-small">Deskripsi singkat</label>
+              <textarea id="achieve-desc" class="form-control form-small" rows="2" placeholder="Aktif di kegiatan sekolah, pernah ikut KSM kabupaten & provinsi, OSN Ekonomi, serta tampil baca puisi dan pidato."></textarea>
+            </div>
+
+            <div class="col-12 d-flex align-items-center gap-3">
+              <img id="achieve-preview" class="thumb-preview" src="" alt="" style="display:none">
+              <button type="submit" class="btn btn-primary">Tambah Prestasi</button>
+              <button type="button" id="achieve-clear" class="btn btn-outline-secondary">Bersihkan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="projects py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" data-aos="fade-up">Proyek Saya</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Beberapa karya dan proyek web yang akan saya buat kedepannya.</p>
+
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card shadow">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Proyek 1">
+            <div class="card-body">
+              <h5 class="card-title">Portfolio Website</h5>
+              <p class="card-text">Website pribadi dengan tampilan modern dan responsif menggunakan Bootstrap.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+          <div class="card shadow">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Proyek 2">
+            <div class="card-body">
+              <h5 class="card-title">E-Learning Design</h5>
+              <p class="card-text">Desain halaman e-learning interaktif untuk belajar online dengan gaya minimalis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="700">
+          <div class="card shadow">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Proyek 3">
+            <div class="card-body">
+              <h5 class="card-title">Sistem Informasi Sederhana</h5>
+              <p class="card-text">Proyek CRUD sederhana berbasis web untuk pengelolaan data mahasiswa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" data-aos="fade-up">Hubungi Saya</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Ingin bekerja sama atau sekadar menyapa? Silakan hubungi saya melalui kontak berikut.</p>
+      <div data-aos="fade-up" data-aos-delay="400">
+        <p>📧 <a href="mailto:mhanda@example.com">mhanda@example.com</a></p>
+        <p>📱 Instagram: <a href="https://instagram.com/mhanda" target="_blank">https://www.instagram.com</a></p>
+        <p>💼 LinkedIn: <a href="https://linkedin.com/in/mhanda" target="_blank">linkedin.com/in/mhanda</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Mhanda Fadhelia Novriza | Dibuat dengan ❤️ dan Bootstrap</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script>
+    // Inisialisasi AOS (animasi scroll)
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Efek mengetik teks
+    var typed = new Typed(".typing", {
+      strings: ["Mahasiswa Sistem Informasi", "Web Developer", "UI/UX Enthusiast"],
+      typeSpeed: 80,
+      backSpeed: 50,
+      loop: true
+    });
+
+    // ----- School form handling (client-side, preview & append) -----
+    const schoolForm = document.getElementById('school-form');
+    const schoolPhotoInput = document.getElementById('school-photo');
+    const schoolPreview = document.getElementById('school-preview');
+    const schoolList = document.getElementById('school-list');
+    const schoolClear = document.getElementById('school-clear');
+
+    // preview image when selected
+    schoolPhotoInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) { schoolPreview.style.display = 'none'; schoolPreview.src = ''; return; }
+      const reader = new FileReader();
+      reader.onload = () => {
+        schoolPreview.src = reader.result;
+        schoolPreview.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    schoolClear.addEventListener('click', () => {
+      schoolForm.reset();
+      schoolPreview.style.display = 'none';
+      schoolPreview.src = '';
+    });
+
+    schoolForm.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const year = document.getElementById('school-year').value.trim();
+      const name = document.getElementById('school-name').value.trim();
+      const desc = document.getElementById('school-desc').value.trim();
+      const file = schoolPhotoInput.files[0];
+
+      // Build new card
+      const col = document.createElement('div');
+      col.className = 'col-md-4';
+      col.setAttribute('data-aos', 'fade-up');
+
+      const card = document.createElement('div');
+      card.className = 'card entry-card shadow-sm';
+
+      const img = document.createElement('img');
+      img.className = 'card-img-top';
+      img.alt = name + ' image';
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          img.src = reader.result;
+          appendCard();
+        };
+        reader.readAsDataURL(file);
+      } else {
+        // default placeholder image if no file
+        img.src = 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80';
+        appendCard();
+      }
+
+      function appendCard() {
+        const body = document.createElement('div');
+        body.className = 'card-body';
+        const h5 = document.createElement('h5');
+        h5.className = 'card-title';
+        h5.textContent = name;
+        const pYear = document.createElement('p');
+        pYear.className = 'card-text mb-1';
+        pYear.innerHTML = `<small class="text-muted">${year}</small>`;
+        const pDesc = document.createElement('p');
+        pDesc.className = 'card-text';
+        pDesc.textContent = desc;
+
+        body.appendChild(h5);
+        body.appendChild(pYear);
+        body.appendChild(pDesc);
+
+        card.appendChild(img);
+        card.appendChild(body);
+        col.appendChild(card);
+
+        // insert at top
+        schoolList.insertBefore(col, schoolList.firstChild);
+
+        // reset form
+        schoolForm.reset();
+        schoolPreview.style.display = 'none';
+        schoolPreview.src = '';
+
+        // refresh AOS to animate newly added element
+        AOS.refresh();
+      }
+    });
+
+    // ----- Achievements form handling -----
+    const achieveForm = document.getElementById('achieve-form');
+    const achievePhotoInput = document.getElementById('achieve-photo');
+    const achievePreview = document.getElementById('achieve-preview');
+    const achieveList = document.getElementById('achievements-list');
+    const achieveClear = document.getElementById('achieve-clear');
+
+    achievePhotoInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) { achievePreview.style.display = 'none'; achievePreview.src = ''; return; }
+      const reader = new FileReader();
+      reader.onload = () => {
+        achievePreview.src = reader.result;
+        achievePreview.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    achieveClear.addEventListener('click', () => {
+      achieveForm.reset();
+      achievePreview.style.display = 'none';
+      achievePreview.src = '';
+    });
+
+    achieveForm.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const year = document.getElementById('achieve-year').value.trim();
+      const title = document.getElementById('achieve-title').value.trim();
+      const desc = document.getElementById('achieve-desc').value.trim();
+      const file = achievePhotoInput.files[0];
+
+      // Build new card
+      const col = document.createElement('div');
+      col.className = 'col-md-4';
+      col.setAttribute('data-aos', 'fade-up');
+
+      const card = document.createElement('div');
+      card.className = 'card entry-card shadow-sm';
+
+      const img = document.createElement('img');
+      img.className = 'card-img-top';
+      img.alt = title + ' image';
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          img.src = reader.result;
+          appendCard();
+        };
+        reader.readAsDataURL(file);
+      } else {
+        img.src = 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80';
+        appendCard();
+      }
+
+      function appendCard() {
+        const body = document.createElement('div');
+        body.className = 'card-body';
+        const h5 = document.createElement('h5');
+        h5.className = 'card-title';
+        h5.textContent = title;
+        const pYear = document.createElement('p');
+        pYear.className = 'card-text mb-1';
+        pYear.innerHTML = `<small class="text-muted">${year}</small>`;
+        const pDesc = document.createElement('p');
+        pDesc.className = 'card-text';
+        pDesc.textContent = desc;
+
+        body.appendChild(h5);
+        body.appendChild(pYear);
+        body.appendChild(pDesc);
+
+        card.appendChild(img);
+        card.appendChild(body);
+        col.appendChild(card);
+
+        // insert at top
+        achieveList.insertBefore(col, achieveList.firstChild);
+
+        // reset form
+        achieveForm.reset();
+        achievePreview.style.display = 'none';
+        achievePreview.src = '';
+
+        // refresh AOS to animate newly added element
+        AOS.refresh();
+      }
+    });
+
+    // ensure AOS refresh when window loads (for initial images)
+    window.addEventListener('load', () => { AOS.refresh(); });
+  </script>
+
+</body>
+</html>
